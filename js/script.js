@@ -13,12 +13,7 @@ const io = new IntersectionObserver(entries => {
 }, { rootMargin: '-45% 0px -50% 0px' });
 document.querySelectorAll('main section[id]').forEach(s => io.observe(s));
 
-// Hide broken images so the placeholder gradient shows until you add your own
-document.querySelectorAll('img:not(#lb img)').forEach(img => {
-  const miss = () => img.classList.add('missing');
-  img.addEventListener('error', miss);
-  if (img.complete && !img.naturalWidth) miss();
-});
+
 
 // Certificate viewer (works for any .cert-card you add later)
 const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
