@@ -14,7 +14,7 @@ const io = new IntersectionObserver(entries => {
 document.querySelectorAll('main section[id]').forEach(s => io.observe(s));
 
 // Hide broken images so the placeholder gradient shows until you add your own
-document.querySelectorAll('img').forEach(img => {
+document.querySelectorAll('img:not(#lb img)').forEach(img => {
   const miss = () => img.classList.add('missing');
   img.addEventListener('error', miss);
   if (img.complete && !img.naturalWidth) miss();
