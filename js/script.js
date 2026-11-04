@@ -1,10 +1,10 @@
-// Mobile menu
+
 const burger = document.getElementById('burger'), nav = document.getElementById('nav');
 const setMenu = open => { nav.classList.toggle('open', open); burger.setAttribute('aria-expanded', open); };
 burger.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
 nav.addEventListener('click', e => { if (e.target.tagName === 'A') setMenu(false); });
 
-// Highlight current section in the nav
+
 const links = [...nav.querySelectorAll('a')];
 const io = new IntersectionObserver(entries => {
   entries.forEach(en => {
@@ -15,7 +15,7 @@ document.querySelectorAll('main section[id]').forEach(s => io.observe(s));
 
 
 
-// Certificate viewer (works for any .cert-card you add later)
+
 const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
 document.querySelector('.certs').addEventListener('click', e => {
   const img = e.target.closest('.cert-card')?.querySelector('img');
