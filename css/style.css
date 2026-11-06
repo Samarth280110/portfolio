@@ -191,9 +191,17 @@ nav a.active {
     color: var(--ink);
 }
 
-.btn.ghost {
+.btnghost {
     background: transparent;
     border-color: var(--line);
+    display: inline-block;
+    padding: .75rem 1.5rem;
+    color: var(--text);
+    border: 1px solid var(--rust);
+    border-radius: 6px;
+    font: 700 .95rem var(--sans);
+    cursor: pointer;
+    transition: background .2s, border-color .2s;
 }
 
 .btnghost:hover {
