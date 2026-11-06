@@ -196,6 +196,12 @@ nav a.active {
     border-color: var(--line);
 }
 
+.btn.ghost:hover {
+    background: var(--copper);
+    border-color: var(--copper);
+    color: var(--ink);
+}
+
 .social {
     display: flex;
     gap: .7rem;
